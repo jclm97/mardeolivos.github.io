@@ -82,6 +82,33 @@ body::before {
     max-width: 300px;
 }
 
+/* Espaciado entre productos */
+.producto {
+    margin-bottom: 3rem;
+}
+
+/* Línea decorativa entre productos */
+.producto+.producto {
+    position: relative;
+}
+
+.producto+.producto::before {
+    content: "";
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(to right,
+            transparent 0%,
+            #ba913d 25%,
+            #c49e9f 50%,
+            #ba913d 75%,
+            transparent 100%);
+    border-radius: 1px;
+    opacity: 0.7;
+}
 .info {
     width: 45%;
     max-width: 300px;
