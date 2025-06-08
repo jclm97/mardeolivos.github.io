@@ -91,6 +91,7 @@ body::before {
     flex-wrap: nowrap;
     opacity: 0;
     transition: all 0.7s ease-out;
+    
 }
 
 
@@ -100,7 +101,6 @@ body::before {
     transform: translateX(100px);
 }
 
-/* Animación base desde la izquierda */
 .producto.impar {
     flex-direction: row-reverse;
     transform: translateX(-100px);
