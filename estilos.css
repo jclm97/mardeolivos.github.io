@@ -8,7 +8,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    /* 👈 NECESARIO para que ::before se coloque encima sin romper */
 }
 
 body::before {
@@ -20,7 +19,6 @@ body::before {
     height: 100%;
     pointer-events: none;
     z-index: 0;
-    /* 👈 debajo del contenido, pero encima del fondo */
     background:
         linear-gradient(to right,
             #faf4ec 0%,
@@ -32,36 +30,7 @@ body::before {
     opacity: 0.6;
 }
 
-.alergenos-lista {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  margin-top: 0.5rem;
-}
-
-.alergeno {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.3rem 0.7rem;
-  border-radius: 999px;
-  font-size: 0.9rem;
-  background: rgba(255, 255, 255, 0.15); /* semitransparente cálido */
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(80, 58, 44, 0.2);
-  color: #503a2c;
-  line-height: 1.2;
-}
-
-.alergeno img {
-    width: 1.4em;
-    height: 1.4em;
-    margin-right: 0.4em;
-    border-radius: 50%;
-    object-fit: contain;
-    display: inline-block;
-    vertical-align: middle;
-}
-
+/* ==== CARTA Y PRODUCTOS ==== */
 
 .marco-olivo {
     background: url('img/bordeolivo.jpeg') no-repeat center center;
@@ -71,31 +40,31 @@ body::before {
     justify-content: center;
     min-height: 100vh;
 }
+
 .carta {
     background-color: #faf4ec;
     padding: 2rem;
     border-radius: 10px;
-    max-width: 600px;
+    max-width: 800px;
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-
-
-
+/* PRODUCTO GENERAL */
 .producto {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: nowrap;
+    width: 100%;
+    box-sizing: border-box;
     opacity: 0;
     transition: all 0.7s ease-out;
-    
+    margin-bottom: 3rem;
 }
 
-
-/* Animación base desde la derecha */
+/* Alternancia */
 .producto.par {
     flex-direction: row;
     transform: translateX(100px);
@@ -117,12 +86,21 @@ body::before {
     max-width: 300px;
 }
 
-/* Espaciado entre productos */
-.producto {
-    margin-bottom: 3rem;
+.info {
+    width: 45%;
+    max-width: 300px;
 }
 
-/* Línea decorativa entre productos */
+h2 {
+    color: #503a2c;
+    margin: 0 0 0.5rem;
+}
+
+p {
+    color: #503a2c;
+}
+
+/* Separador entre productos */
 .producto+.producto {
     position: relative;
 }
@@ -144,24 +122,46 @@ body::before {
     border-radius: 1px;
     opacity: 0.7;
 }
-.info {
-    width: 45%;
-    max-width: 300px;
-}
 
-h2 {
-    color: #503a2c;
-    margin: 0 0 0.5rem;
-}
-
-p {
-    color: #503a2c;
-}
+/* ==== ALÉRGENOS ==== */
 
 .alergenos {
     font-size: 0.9em;
     color: #ba913d;
 }
+
+.alergenos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    margin-top: 0.5rem;
+    justify-content: flex-start;
+}
+
+.alergeno {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(2px);
+    border: 1px solid rgba(80, 58, 44, 0.2);
+    color: #503a2c;
+    line-height: 1.2;
+}
+
+.alergeno img {
+    width: 1.4em;
+    height: 1.4em;
+    margin-right: 0.4em;
+    border-radius: 50%;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ==== LOGO ==== */
 
 .logo-header {
     text-align: center;
@@ -176,12 +176,14 @@ p {
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
 }
 
-/* ✅ RESPONSIVE para móvil */
+/* ==== RESPONSIVE MÓVIL ==== */
+
 @media (max-width: 768px) {
 
     .producto.par,
     .producto.impar {
         flex-direction: column !important;
+        align-items: center;
     }
 
     .producto img {
