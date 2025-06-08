@@ -171,14 +171,18 @@ p {
         flex-direction: column !important;
     }
 
-    .producto img,
+    .producto img {
+        order: -1;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 10px;
+    }
+
     .producto .info {
+        order: 0;
         width: 100%;
         max-width: 100%;
         text-align: center;
-    }
-
-    .info {
         align-items: center;
         display: flex;
         flex-direction: column;
