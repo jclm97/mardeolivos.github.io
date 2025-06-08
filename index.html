@@ -3,28 +3,50 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Mar de Olivos</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta | Mar de Olivos</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 
+<script>
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.producto').forEach(prod => {
+        observer.observe(prod);
+    });
+</script>
+
+
 <body>
-    <header>
-        <h1>Mar de Olivos</h1>
-        <p>Restaurante Mediterráneo</p>
-    </header>
-    <main>
-        <h2>Menú</h2>
-        <ul>
-            <li>Ensalada de olivas</li>
-            <li>Paella de marisco</li>
-            <li>Lubina al horno</li>
-        </ul>
-        <p><a href="https://wa.me/34600123456">Reserva por WhatsApp</a></p>
+    <main class="carta">
+
+        <!-- Producto 1 -->
+        <section class="producto fila par">
+            <img src="img/bravas.png" alt="Tapa 1">
+            <div class="info">
+                <h2>Ensalada de Pulpo</h2>
+                <p>Delicioso pulpo con pimentón y patatas. <span class="alergenos">[🐙 | 🥔]</span></p>
+            </div>
+        </section>
+
+        <!-- Producto 2 -->
+        <section class="producto fila impar">
+            <div class="info">
+                <h2>Croquetas de Jamón</h2>
+                <p>Cremosas por dentro, crujientes por fuera. <span class="alergenos">[🥛 | 🌾]</span></p>
+            </div>
+            <img src="img/salmonsoplete.png" alt="Tapa 2">
+        </section>
+
+        <!-- Añade más productos igual alternando -->
+
     </main>
-    <footer>
-        &copy; 2025 Mar de Olivos
-    </footer>
 </body>
 
 </html>
