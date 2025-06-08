@@ -12,29 +12,31 @@
 
 
 <body>
-    <main class="carta">
+    <div class="marco-olivo">
+        <main class="carta">
 
-        <!-- Producto 1 -->
-        <section class="producto fila par">
-            <img src="img/bravas.png" alt="Tapa 1">
-            <div class="info">
-                <h2>Ensalada de Pulpo</h2>
-                <p>Delicioso pulpo con pimentón y patatas. <span class="alergenos">[🐙 | 🥔]</span></p>
-            </div>
-        </section>
+            <!-- Producto 1 -->
+            <section class="producto fila par">
+                <img src="img/bravas.png" alt="Tapa 1">
+                <div class="info">
+                    <h2>Ensalada de Pulpo</h2>
+                    <p>Delicioso pulpo con pimentón y patatas. <span class="alergenos">[🐙 | 🥔]</span></p>
+                </div>
+            </section>
 
-        <!-- Producto 2 -->
-        <section class="producto fila impar">
-            <div class="info">
-                <h2>Croquetas de Jamón</h2>
-                <p>Cremosas por dentro, crujientes por fuera. <span class="alergenos">[🥛 | 🌾]</span></p>
-            </div>
-            <img src="img/salmonsoplete.png" alt="Tapa 2">
-        </section>
+            <!-- Producto 2 -->
+            <section class="producto fila impar">
+                <div class="info">
+                    <h2>Croquetas de Jamón</h2>
+                    <p>Cremosas por dentro, crujientes por fuera. <span class="alergenos">[🥛 | 🌾]</span></p>
+                </div>
+                <img src="img/salmonsoplete.png" alt="Tapa 2">
+            </section>
 
-        <!-- Añade más productos igual alternando -->
+            <!-- Añade más productos igual alternando -->
 
-    </main>
+        </main>
+    </div>
     <script>
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {

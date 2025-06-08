@@ -32,13 +32,23 @@ body::before {
     opacity: 0.6;
 }
 
-.carta {
+.marco-olivo {
+    background: url('img/bordeolivo.jpeg') no-repeat center center;
+    background-size: contain;
+    padding: 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
-
+.carta {
+    background-color: #faf4ec;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 .producto {
     display: flex;
     align-items: center;
