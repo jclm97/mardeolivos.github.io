@@ -79,15 +79,20 @@ body::before {
     width: 100%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+
+
+
 .producto {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     opacity: 0;
     transition: all 0.7s ease-out;
 }
+
 
 /* Animación base desde la derecha */
 .producto.par {
