@@ -165,7 +165,9 @@ p {
 
 /* ✅ RESPONSIVE para móvil */
 @media (max-width: 768px) {
-    .producto {
+
+    .producto.par,
+    .producto.impar {
         flex-direction: column !important;
     }
 
@@ -174,5 +176,15 @@ p {
         width: 100%;
         max-width: 100%;
         text-align: center;
+    }
+
+    .info {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .alergenos-lista {
+        justify-content: center;
     }
 }
