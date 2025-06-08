@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Lucida Handwriting', cursive;
     background-color: #faf4ec;
     background-image: url('img/bordeolivo.jpeg');
     background-repeat: no-repeat;
@@ -32,6 +32,32 @@ body::before {
     opacity: 0.6;
 }
 
+
+.alergenos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.alergeno {
+    display: flex;
+    align-items: center;
+    background: #f2f2f2;
+    padding: 0.3rem 0.7rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #333;
+    max-width: 300px;
+}
+
+.alergeno img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    object-fit: cover;
+}
 .marco-olivo {
     background: url('img/bordeolivo.jpeg') no-repeat center center;
     background-size: contain;
