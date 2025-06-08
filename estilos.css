@@ -102,6 +102,7 @@ body::before {
 }
 
 .producto.impar {
+    flex-direction: row-reverse;
     transform: translateX(-100px);
 }
 
