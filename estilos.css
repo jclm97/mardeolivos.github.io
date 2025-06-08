@@ -4,6 +4,24 @@ body {
     font-family: 'Segoe UI', sans-serif;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    background: linear-gradient(to right,
+            #faf4ec 0%,
+            #c49e9f 25%,
+            #ba913d 50%,
+            #c49e9f 75%,
+            #faf4ec 100%);
+    opacity: 0.2;
+}
+
 .carta {
     display: flex;
     flex-direction: column;
