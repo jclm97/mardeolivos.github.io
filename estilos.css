@@ -18,16 +18,19 @@ body {
     gap: 1rem;
     flex-wrap: wrap;
     opacity: 0;
-    transform: translateX(100px);
     transition: all 0.7s ease-out;
 }
 
+/* Animación base desde la derecha */
 .producto.par {
     flex-direction: row;
+    transform: translateX(100px);
 }
 
+/* Animación base desde la izquierda */
 .producto.impar {
     flex-direction: row-reverse;
+    transform: translateX(-100px);
 }
 
 .producto.visible {
@@ -58,4 +61,18 @@ p {
 .alergenos {
     font-size: 0.9em;
     color: #ba913d;
+}
+
+/* ✅ RESPONSIVE para móvil */
+@media (max-width: 768px) {
+    .producto {
+        flex-direction: column !important;
+    }
+
+    .producto img,
+    .producto .info {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
 }

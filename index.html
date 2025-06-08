@@ -8,19 +8,7 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 
-<script>
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.producto').forEach(prod => {
-        observer.observe(prod);
-    });
-</script>
 
 
 <body>
@@ -47,6 +35,19 @@
         <!-- Añade más productos igual alternando -->
 
     </main>
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.producto').forEach(prod => {
+            observer.observe(prod);
+        });
+    </script>
 </body>
 
 </html>
