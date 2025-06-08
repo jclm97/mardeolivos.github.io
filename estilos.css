@@ -163,6 +163,19 @@ p {
     color: #ba913d;
 }
 
+.logo-header {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.logo-header img {
+    max-width: 220px;
+    width: 80%;
+    height: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
 /* ✅ RESPONSIVE para móvil */
 @media (max-width: 768px) {
 
