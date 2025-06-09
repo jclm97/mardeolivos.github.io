@@ -100,9 +100,10 @@ body::before {
     flex-direction: column;
     gap: 2rem;
     background-image: url('img/bordeolivo.jpeg');
+    background-color: rgba(255, 255, 255, 0.647);
+    background-blend-mode: overlay;
     background-size: 100% auto;
     background-position: center top;
-    background-color: #faf4ec;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
