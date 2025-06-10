@@ -91,7 +91,6 @@ body::before {
     justify-content: center;
     flex-direction: column;
 }
-
 .carta {
     margin: 0 auto;
     width: 100%;
@@ -99,18 +98,36 @@ body::before {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-background:
-        linear-gradient(rgba(255, 255, 255, 0.647), rgba(255, 255, 255, 0.647)),
-        url('img/bordeolivo.jpeg') center top/100% auto repeat;
-    /* resto de reglas idénticas */
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+
+    /* Solo la imagen de fondo */
+    background-image: url('img/bordeolivo.jpeg');
+    background-position: center top;
+    background-size: 100% auto;
+    background-repeat: repeat;
+
     position: relative;
-    z-index: 1;
+    /* para que funcione ::before */
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    z-index: 1;
+    overflow: hidden;
+    /* recorta el overlay si hace overflow */
+}
+
+.carta::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* top:0; right:0; bottom:0; left:0 */
+    background-color: rgba(255, 255, 255, 0.65);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Asegura que el contenido de la carta quede por encima del overlay */
+.carta>* {
+    position: relative;
     z-index: 1;
 }
 
