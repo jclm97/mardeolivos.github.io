@@ -99,15 +99,18 @@ body::before {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    background-image: url('img/bordeolivo.jpeg');
-    background-color: rgba(255, 255, 255, 0.647);
-    background-blend-mode: overlay;
-    background-size: 100% auto;
-    background-position: center top;
+background:
+        linear-gradient(rgba(255, 255, 255, 0.647), rgba(255, 255, 255, 0.647)),
+        url('img/bordeolivo.jpeg') center top/100% auto repeat;
+    /* resto de reglas idénticas */
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
     position: relative;
+    z-index: 1;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
     z-index: 1;
 }
 
@@ -221,8 +224,3 @@ p {
     margin-right: 0.5rem;
 }
 
-@media (max-width: 768px) {
-    body {
-        background-attachment: scroll !important;
-    }
-}
